@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Nutrilize - Personal Nutrition Software</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            // You can add form validation here
+            alert('Register successful');
+            window.location.href = 'index2.html';
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="inner">
+        <div id="backgroundchange">
+            <div class="backgroundimg" id="back1"></div>
+            <div class="backgroundimg" id="back2"></div>
+            <div class="backgroundimg" id="back3"></div>
+        </div>
+    </div>
+    <header>
+        <div class="circle-container"> <!-- Add this line -->
+            <div class="title-container">
+                <img src="https://cdn3.iconfinder.com/data/icons/alphabet-letters-1/24/Artboard_40-1024.png" alt="Nutrilize Logo" id="logo">
+                <h1>N U T R I L I Z E</h1>
+            </div>
+            <div class = "header-content">
+                <p>Your Personal Nutrition Expert </p>
+                <button id="learn-more">Learn More</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>CREATE YOUR PROFILE</h2>
+        <form onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+
+            <label for="healthStatus">Health Status:</label>
+            <textarea id="healthStatus" name="healthStatus" required></textarea>
+
+            <label for="dietaryRestrictions">Dietary Restrictions:</label>
+            <textarea id="dietaryRestrictions" name="dietaryRestrictions"></textarea>
+
+            <label for="medicalConditions">Medical Conditions:</label>
+            <textarea id="medicalConditions" name="medicalConditions"></textarea>
+
+            <input type="submit" value="SUBMIT">
+        </form>
+    </main>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="https://cdn3.iconfinder.com/data/icons/alphabet-letters-1/24/Artboard_40-1024.png" alt="Nutrilize Logo" class="modal-logo">
+            <h2>N U T R I L I Z E *</h2>
+            <p>
+                The purpose of Nutrilise is to help people achieve the best health and physical and mental well-being by providing personalized nutritional advice. 'Personalization' means being able to customize nutritional advice according to their unique needs and preferences. Nutrition plays a crucial role in maintaining health, so whether it is healthy adults or adults with health concerns, they need to regularly adjust their nutritional and dietary habits. However, due to various factors, including technological constraints, busy lifestyles, food preferences, and medical conditions, many people find it difficult to meet their nutritional needs. Nutrilise aims to provide personalized recommendations based on users' personal needs and lifestyle preferences, helping them overcome these challenges.
+            </p>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        const modal = document.getElementById("modal");
+    
+        // Get the button that opens the modal
+        const btn = document.getElementById("learn-more");
+    
+        // Get the element that closes the modal
+        const close = document.getElementsByClassName("close")[0];
+    
+        // When the user clicks the button, open the modal
+        btn.onclick = () => {
+            modal.style.display = "block";
+            setTimeout(() => {
+                modal.style.opacity = "1";
+                document.querySelector(".modal-content").style.transform = "translateY(0%)";
+            }, 100);
+        };
+    
+        // When the user clicks on the close element, close the modal
+        close.onclick = () => {
+            modal.style.opacity = "0";
+            document.querySelector(".modal-content").style.transform = "translateY(-100%)";
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300);
+        };
+    
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.opacity = "0";
+                document.querySelector(".modal-content").style.transform = "translateY(-100%)";
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 300);
+            }
+        };
+    </script>      
+</body>
+</html>

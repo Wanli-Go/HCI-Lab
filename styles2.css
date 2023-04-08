@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100%;
+    overflow: hidden;
+    font-family: "Georgia", serif;
+    line-height: 1.6;
+    /*animation: gradient-bg 5s linear infinite;*/
+    /*background-image: linear-gradient(to right, rgba(200, 255, 200, 0.5), rgba(200, 200, 255, 0.5));*/
+}
+/*
+@keyframes gradient-bg {
+    0%, 100% {
+        background: linear-gradient(135deg, rgba(204, 255, 204, 0.5), rgba(204, 255, 255, 0.5));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(204, 255, 255, 0.5), rgba(204, 255, 204, 0.5));
+    }
+}
+*/
+
+.bg {
+    height: 100vh;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, rgb(233, 255, 233) 0%, rgb(212, 255, 212) 25%, rgb(200, 255, 200) 51%, rgb(181, 181, 242) 100%);
+    -webkit-animation: AnimateBG 20s ease infinite;
+            animation: AnimateBG 20s ease infinite;
+}
+  
+@-webkit-keyframes AnimateBG {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+@keyframes AnimateBG {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+#main-title {
+    color:black;
+    text-shadow:
+    -1px -1px 0 rgb(58, 255, 209), /* Set the top-left shadow */
+    1px -1px 0 rgb(58, 255, 209), /* Set the top-right shadow */
+    -1px 1px 0 rgb(58, 255, 209), /* Set the bottom-left shadow */
+    1px 1px 0 rgb(58, 255, 209); /* Set the bottom-right shadow */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+main {
+    display: flex;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.tracking-integration {
+    text-align: center;
+    height: 78vh;
+    overflow: auto;
+    flex: 0 0 36%;
+    max-width: 36%;
+    border-right: 1px solid rgb(166, 166, 166);
+    padding-right: 2rem;
+}
+
+.recommended-diet {
+    margin-top: 2rem;
+}
+
+.diet-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.diet-btn:hover {
+    background-color: #45a049;
+}
+
+
+.apps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.app-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    align-self: center;
+}
+.app-btn:hover {
+background-color: #45a049;
+}
+
+.tracking-summary {
+    height: 78vh;
+    flex: 1;
+    overflow-y: scroll;
+    padding-left: 2rem;
+}
+
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.keys {
+    justify-content: center;
+}
+.summary-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-img {
+width: 366px;
+height: 183px;
+margin-bottom: 0.5rem;
+}    
+
+
+.mini-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: azure;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    z-index: 999;
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    display: none;
+}
+
+.detail-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.detail-btn:hover {
+    background-color: #45a049;
+}
+

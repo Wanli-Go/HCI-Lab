@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Georgia", serif;
+    line-height: 1.6;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.diet-options {
+    flex: 0.5;
+    margin-right: 2rem;
+}
+
+.diet-options h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#main-title {
+    color:black;
+    text-shadow:
+    -1px -1px 0 rgb(58, 255, 209), /* Set the top-left shadow */
+    1px -1px 0 rgb(58, 255, 209), /* Set the top-right shadow */
+    -1px 1px 0 rgb(58, 255, 209), /* Set the bottom-left shadow */
+    1px 1px 0 rgb(58, 255, 209); /* Set the bottom-right shadow */
+}
+
+.bg {
+    height: 100vh;
+    background-size: 300% 300%;
+    background-image: linear-gradient(-45deg, rgb(233, 255, 233) 0%, rgb(212, 255, 212) 25%, rgb(200, 255, 200) 51%, rgb(181, 181, 242) 100%);
+    -webkit-animation: AnimateBG 20s ease infinite;
+    animation: AnimateBG 20s ease infinite;
+}
+
+@-webkit-keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.diet-plans {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.option-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+}
+
+.option-btn:hover {
+    background-color: #45a049;
+}
+
+.diet-table {
+    height: 78vh;
+    overflow-y: auto;
+    flex: 1.5;
+    display: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.diet-table th,
+.diet-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.diet-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.diet-table tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.diet-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Set fixed width for each table header cell */
+.diet-table th:nth-child(1) {
+    width: 100px;
+}
+
+.diet-table th:nth-child(2) {
+    width: 300px;
+}
+
+.diet-table th:nth-child(3) {
+    width: 300px;
+}
+
+.diet-table th:nth-child(4) {
+    width: 300px;
+}
+
+/* Set fixed width for each table data cell */
+.diet-table td:nth-child(1) {
+    width: 100px;
+}
+
+.diet-table td:nth-child(2) {
+    width: 300px;
+}
+
+.diet-table td:nth-child(3) {
+    width: 300px;
+}
+
+.diet-table td:nth-child(4) {
+    width: 300px;
+}

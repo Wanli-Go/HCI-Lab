@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <title>Nutrilize - Fitness & Lifestyle Tracking</title>
+    <script>
+        function viewDietTable() {
+            window.location.href = 'index3.html';
+        }
+    </script>    
+</head>
+<body>
+    <div class="bg">
+    <header>
+        <div class="logo-container">
+            <img src="https://cdn3.iconfinder.com/data/icons/alphabet-letters-1/24/Artboard_40-1024.png" alt="Nutrilize Logo" class="logo">
+            <h1>NUTRILIZE</h1>
+        </div>
+        <h2 id="main-title">Fitness & Lifestyle Tracking</h2>
+    </header>
+    <main>
+        <section class="tracking-integration">
+            <h3>Connect Your Fitness Apps</h3>
+            <p>Integrate Nutrilize with your favorite fitness apps to track your activity, sleep, and heart rate.</p>
+            <div class="apps">
+                <button class="app-btn fitbit" id = "connect-fitbit">Connect Fitbit</button>
+                <button class="app-btn apple-health" id = "connect-apple-health">Connect Apple Health</button>
+            </div>
+            <br><hr>
+            <section class="recommended-diet">
+                <h3>Recommended Diet Table</h3>
+                <p>View a table of personalized dietary recommendations based on your unique nutritional needs.</p>
+                <button class="diet-btn" onclick="viewDietTable()">View Diet Table</button>
+            </section>            
+        </section>
+        <section class="tracking-summary">
+            <h3> Your Activity Summary</h3>
+            <div class="summary-item">
+                <h4 class="keys">Activity Level </h4>
+                <div class="summary-card">
+                    <img src="https://www.firstbeat.com/wp-content/uploads/2021/02/Life-VO2max-graph.jpg" alt="Activity Level" class="summary-img">
+                    <h5 id="activity-level">Moderate</h5>
+                </div>
+                <button class="detail-btn" data-index="index1">Details</button>
+            </div>
+            
+            <div class="summary-item">
+                <h4 class="keys">Sleep Patterns </h4>
+                <div class="summary-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0882/5016/files/Adult_Sleep_Cycle_for_Nightime_Sleep_large.png?745232372026790655" alt="Sleep Patterns" class="summary-img">
+                    <h5 id="sleep-patterns">7 hours/night</h5>
+                </div>
+                <button class="detail-btn" data-index="index2">Details</button>
+            </div>
+            <div class="summary-item">
+                <h4 class="keys">Heart Rate </h4>
+                <div class="summary-card">
+                    <img src="https://www.researchgate.net/publication/326576232/figure/fig2/AS:685788685680640@1540516172061/Heart-rate-trends-before-during-and-after-epinephrine-infusion-Epinephrine-was.jpg" alt="Heart Rate" class="summary-img">
+                    <h5 id="heart-rate"> Now 75 bpm</h5>
+                </div>
+                <button class="detail-btn" data-index="index3">Details</button>
+            </div>
+        </section>
+    </main>
+    </div>
+    <div class="mini-page" id="mini-page">
+        <div class="mini-page-content">
+            <img src="" alt="Index Image" class="summary-img" id="mini-page-image">
+            <p id="mini-page-text"></p>
+        </div>
+        <button id="close-mini-page">Close</button>
+    </div>      
+    <div class="overlay" id="overlay"></div>
+    <script>
+        // Get the buttons by ID
+        const fitbitBtn = document.getElementById("connect-fitbit");
+        const appleHealthBtn = document.getElementById("connect-apple-health");
+    
+        // Display a message and disable the Fitbit button
+        fitbitBtn.onclick = () => {
+            alert("Data synchronized with Fitbit");
+            fitbitBtn.disabled = true;
+            fitbitBtn.style.backgroundColor = "#a9a9a9";
+        };
+    
+        // Display a message and disable the Apple Health button
+        appleHealthBtn.onclick = () => {
+            alert("Data synchronized with Apple Health");
+            appleHealthBtn.disabled = true;
+            appleHealthBtn.style.backgroundColor = "#a9a9a9";
+        };
+
+    const detailButtons = document.querySelectorAll(".detail-btn");
+    const miniPage = document.getElementById("mini-page");
+    const miniPageImage = document.getElementById("mini-page-image");
+    const miniPageText = document.getElementById("mini-page-text");
+    const closeMiniPage = document.getElementById("close-mini-page");
+    const overlay = document.getElementById("overlay");
+
+    // Replace these sample data with your actual data
+    const indexDetails = [
+        {
+            image: "https://www.firstbeat.com/wp-content/uploads/2021/02/Life-VO2max-graph.jpg",
+            text: "It seems that your current activity level is moderate. This can have both positive and negative impacts on your health and wellbeing. On the one hand, regular moderate physical activity can help to maintain a healthy weight, improve cardiovascular health, reduce stress and anxiety, and increase energy levels. On the other hand, if you're not engaging in enough physical activity or are doing so inconsistently, it can increase the risk of chronic health conditions such as obesity, heart disease, and diabetes. It's important to maintain a balance of physical activity that suits your lifestyle and goals, and to consult with a healthcare provider if you have any concerns about your activity level."
+        },
+        {
+            image: "https://cdn.shopify.com/s/files/1/0882/5016/files/Adult_Sleep_Cycle_for_Nightime_Sleep_large.png?745232372026790655",
+            text: "Getting an average of 7 hours of sleep per day is considered a healthy sleep duration for adults. Adequate sleep is crucial for physical and mental health as it allows the body to repair and rejuvenate, and promotes cognitive function, mood, and overall wellbeing. However, it's worth noting that individual sleep needs can vary and some people may require more or less than 7 hours of sleep per day. Additionally, the quality of sleep is also important, with factors such as sleep disruptions, sleep disorders, and poor sleep hygiene potentially impacting sleep quality. If you're experiencing persistent sleep issues or daytime fatigue, it may be worth consulting with a healthcare provider to determine the cause and potential solutions."
+        },
+        {
+            image: "https://www.researchgate.net/publication/326576232/figure/fig2/AS:685788685680640@1540516172061/Heart-rate-trends-before-during-and-after-epinephrine-infusion-Epinephrine-was.jpg",
+            text: "A resting heart rate of 75 beats per minute (bpm) is within the normal range for adults. However, it's important to note that heart rate can vary depending on a variety of factors such as physical activity, stress levels, and medication use. It's also worth noting that regular physical activity can lead to a lower resting heart rate over time, as the heart becomes more efficient at pumping blood. In general, a lower resting heart rate can be a sign of good cardiovascular health. However, if you're experiencing persistent changes in heart rate, such as a consistently elevated or irregular heart rate, it's important to consult with a healthcare provider to rule out any underlying health issues."
+        }
+    ];
+
+        detailButtons.forEach((button, index) => {
+            button.onclick = () => {
+                miniPageImage.src = indexDetails[index].image;
+                miniPageText.textContent = indexDetails[index].text;
+                miniPage.style.display = "block";
+                overlay.style.display = "block";
+            };
+        });
+
+        closeMiniPage.onclick = () => {
+            miniPage.style.display = "none";
+            overlay.style.display = "none";
+        };
+    </script>    
+</body>
+</html>

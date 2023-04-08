@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css">
+    <title>Nutrilize - Dietary Recommendations</title>
+</head>
+<body>
+    <div class="bg">
+    <header>
+        <div class="logo-container">
+            <img src="https://cdn3.iconfinder.com/data/icons/alphabet-letters-1/24/Artboard_40-1024.png" alt="Nutrilize Logo" class="logo">
+            <h1>NUTRILIZE</h1>
+        </div>
+        <h2 id = "main-title">Dietary Recommendations</h2>
+    </header>
+    <main>
+        <div class="content-container">
+            <section class="diet-options">
+                <h3>Choose a Diet Plan</h3>
+                <div class="options">
+                    <button class="option-btn">Low Carbohydrate Diet</button>
+                    <button class="option-btn">Efficient Weight Loss Diet</button>
+                    <button class="option-btn">Custom Diet Plan</button>
+                </div>
+            </section>
+            <section class="diet-table">
+                <h3>Your Personalized Meal Plan</h3>
+                <table id = "table">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Breakfast</th>
+                            <th>Lunch</th>
+                            <th>Dinner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Oatmeal</td>
+                            <td>Salad</td>
+                            <td>Grilled Chicken</td>
+                        </tr>
+                        <!-- Add more rows for each day -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    </div>
+    <script>
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.diet-table').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
